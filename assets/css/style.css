@@ -173,7 +173,7 @@ img {
   border-color: var(--color-brand2);
 }
 
-.link-custom {
+/* .link-custom {
   font-weight: 700;
   position: relative;
 }
@@ -191,7 +191,34 @@ img {
 
 .link-custom:hover::after {
   width: 100%;
+} */
+.link-custom {
+  font-weight: 700;
+  display: block; /* Make each link occupy a full line */
+  position: relative;
+  margin-bottom: 5px; /* Add some space between the items */
 }
+
+.link-custom::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background-color: var(--color-brand);
+  position: absolute;
+  left: 0;
+  top: 110%;
+  transition: all 0.4s;
+}
+
+.link-custom:hover::after {
+  width: 100%;
+}
+
+
+
+
+
+
 #hello {
   color: black;
   background-color: #83c3cb;
@@ -307,6 +334,10 @@ img {
   width: 285px;
 }
 /* making img of same size */
+
+
+
+/* main */
 .social-icons a {
   width: 40px;
   height: 40px;
@@ -316,7 +347,39 @@ img {
   background-color: var(--color-base);
   border-radius: 100px;
   font-size: 24px;
+  margin-right: 10px; /* Space between icons */
+  color: var(--color-body); /* Icon color */
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
 }
+
+.social-icons a:hover {
+  background-color: var(--color-brand);
+  color: var(--color-base);
+  transform: scale(1.2); /* Scale up on hover */
+}
+
+.social-icons a:hover i {
+  transform: rotate(360deg); /* Rotate icon on hover */
+  transition: transform 0.5s ease-in-out; /* Animation timing */
+}
+
+
+
+/* .social-icons a {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-base);
+  border-radius: 100px;
+  font-size: 24px;
+} */
+
+
+
+
+
 h1,
 p {
   color: rgb(41, 38, 38);
